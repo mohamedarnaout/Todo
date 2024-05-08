@@ -11,7 +11,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 300px;
+  width: 350px;
   height: 600px;
   background-color: rgb(71, 63, 92);
   border: black 5px solid;
@@ -20,29 +20,77 @@ body {
   width: 100%;
   background-color: rgb(48, 44, 110);
   display: flex;
-  justify-content: space-evenly;
-
+  justify-content: center;
+  height: 50px;
   align-items: center;
-}
-.header_title {
   color: rgb(255, 255, 255);
+  border-bottom: solid 2px black;
+}
+.add {
   width: 100%;
-  margin: 0;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
 }
-.header_add {
+.add_todo {
+  width: 100%;
+  background-color: rgb(50, 46, 107);
+  border: 0;
+  padding: 5px;
   color: #ffffff;
-  font-size: 36px;
-  height: 100%;
-  border-left: black solid 3px;
+  font-size: 25px;
 }
-.box h2 {
+.add_todo::placeholder {
+  color: #ffffff;
+  font-size: 25px;
+}
+.add_todo:focus {
+  outline: 0;
+}
+.add_todo:focus::placeholder {
+  color: transparent;
+}
+.add_btn {
+  width: 50px;
+  color: #ffffff;
+  font-size: 45px;
+  height: 100%;
+  border: 0;
+  border-left: 2px black solid;
+  text-align: center;
+  background-color: rgb(50, 46, 107);
+}
+.add_btn:hover {
+  color: #ffffff;
+  font-size: 46px;
+  background-color: rgb(69, 64, 148);
+  cursor: pointer;
+}
+.add_btn:active {
+  font-size: 43px;
+  background-color: rgb(73, 68, 139);
+}
+.todo_list {
+  background-color: rgb(120, 109, 148);
+  height: 100%;
+  margin: 0;
+  width: 100%;
+  padding: 0;
+  list-style-position: inside;
+}
+.todo_task {
   margin: 0;
   color: white;
   width: 100%;
-  background-color: rgb(120, 109, 148);
-  border: black 2px solid;
+  height: 40px;
+  background-color: rgb(178, 166, 209);
+  border-bottom: black 2px solid;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 20px;
 }
-.box h2::before {
-  content: "-";
-  margin: 0 5px;
+.todo_task::before {
+  content: "*";
+  padding: 5px 5px 0 5px;
 }
